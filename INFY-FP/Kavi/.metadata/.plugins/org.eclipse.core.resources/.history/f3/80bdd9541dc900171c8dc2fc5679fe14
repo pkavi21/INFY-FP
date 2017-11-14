@@ -1,0 +1,19 @@
+package org.task1;
+
+
+public class Reservation {
+
+	public Reservation() {
+		// TODO Auto-generated constructor stub
+	}
+
+	private String name;
+	private long phone;
+	private String fromPlace;
+	private String toPlace;
+	private int departTime;
+	private int arrivalTime;
+		
+
+	
+}

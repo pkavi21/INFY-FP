@@ -1,0 +1,52 @@
+package org.task1;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import org.task1.Reservation;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Output {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+		Session session = sf.openSession();
+		session.beginTransaction();
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		
+		
+		int i = 0;
+		while (i < 3) {
+			i++;
+			System.out.print("Enter Name :");
+			String name = bf.readLine();
+			System.out.print("Enter Phone :");
+			long phone = Long.valueOf(bf.readLine());
+			System.out.print("Enter FromPlace :");
+			String fromPlace = bf.readLine();
+			System.out.print("Enter ToPlace :");
+			String toPlace = bf.readLine();
+			System.out.print("Enter Amount :");
+			int amount = Integer.valueOf(bf.readLine());
+			Reservation obj = new Reservation(name,phone,fromPlace,toPlace,amount);
+			;
+			System.out.println("Enter Name :" + obj.getName());
+			System.out.println("Enter Phone :" + obj.getPhone());
+			System.out.println("Enter fromPlace :" + obj.getFromPlace());
+			System.out.println("Enter fromPlace :" + obj.getToPlace());
+			System.out.println("Enter Amount :" + obj.getAmount())
+			
+
+			session.save(obj);
+		}
+		session.getTransaction().commit();
+
+		sf.close();
+		session.close();
+
+	}
+
+}

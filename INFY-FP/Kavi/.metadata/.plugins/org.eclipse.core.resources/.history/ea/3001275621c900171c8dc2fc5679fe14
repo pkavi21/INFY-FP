@@ -1,0 +1,86 @@
+package org.task1;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Reservation {
+
+	public Reservation() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Reservation(String name, long phone, String fromPlace, String toPlace, int departDate, int arrivalDate) {
+		super();
+		this.name = name;
+		this.phone = phone;
+		this.fromPlace = fromPlace;
+		this.toPlace = toPlace;
+		this.departDate = departDate;
+		this.arrivalDate = arrivalDate;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public long getPhone() {
+		return phone;
+	}
+
+	public void setPhone(long phone) {
+		this.phone = phone;
+	}
+
+	public String getFromPlace() {
+		return fromPlace;
+	}
+
+	public void setFromPlace(String fromPlace) {
+		this.fromPlace = fromPlace;
+	}
+
+	public String getToPlace() {
+		return toPlace;
+	}
+
+	public void setToPlace(String toPlace) {
+		this.toPlace = toPlace;
+	}
+
+	public int getDepartDate() {
+		return departDate;
+	}
+
+	public void setDepartTime(int departDate) {
+		this.departDate = departDate;
+	}
+
+	public int getArrivalDate() {
+		return arrivalDate;
+	}
+
+	public void setArrivalTime(int arrivalDate) {
+		this.arrivalDate = arrivalDate;
+	}
+
+	@Column(name = "C_NAME",length=20)
+	private String name;
+	@Id
+	@Column(name = "Ph_NO",length=10,nullable=false)
+	private long phone;
+	@Column(name = "FROM_PLACE",nullable=false)
+	private String fromPlace;
+	@Column(name = "TO_PLACE",nullable=false)
+	private String toPlace;
+	@Column(name = "DEPART_TIME")
+	private int departDate;
+	@Column(name = "ARRIVAL_TIME")
+	private int arrivalDate;
+
+}

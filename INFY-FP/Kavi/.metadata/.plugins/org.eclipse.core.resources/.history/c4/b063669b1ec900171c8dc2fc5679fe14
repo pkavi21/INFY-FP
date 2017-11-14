@@ -1,0 +1,73 @@
+package org.task1;
+
+
+public class Reservation {
+
+	public Reservation() {
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	public Reservation(String name, long phone, String fromPlace, String toPlace, int departTime, int arrivalTime) {
+		super();
+		this.name = name;
+		this.phone = phone;
+		this.fromPlace = fromPlace;
+		this.toPlace = toPlace;
+		this.departTime = departTime;
+		this.arrivalTime = arrivalTime;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public long getPhone() {
+		return phone;
+	}
+	public void setPhone(long phone) {
+		this.phone = phone;
+	}
+	public String getFromPlace() {
+		return fromPlace;
+	}
+	public void setFromPlace(String fromPlace) {
+		this.fromPlace = fromPlace;
+	}
+	public String getToPlace() {
+		return toPlace;
+	}
+	public void setToPlace(String toPlace) {
+		this.toPlace = toPlace;
+	}
+	public int getDepartTime() {
+		return departTime;
+	}
+	public void setDepartTime(int departTime) {
+		this.departTime = departTime;
+	}
+	public int getArrivalTime() {
+		return arrivalTime;
+	}
+	public void setArrivalTime(int arrivalTime) {
+		this.arrivalTime = arrivalTime;
+	}
+
+
+	private String name;
+	private long phone;
+	private String fromPlace;
+	private String toPlace;
+	private int departTime;
+	private int arrivalTime;
+		
+
+	
+}
