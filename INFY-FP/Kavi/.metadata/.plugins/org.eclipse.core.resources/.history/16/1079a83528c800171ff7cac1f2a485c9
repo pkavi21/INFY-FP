@@ -1,0 +1,8 @@
+package org.emp;
+
+public class Employee {
+	private int id;
+	private String anem;
+	private String emailId;
+	private long phone;
+};

@@ -1,0 +1,32 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Median {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		int m = bf.read();
+		int n = bf.read();
+		int arr[] = new int[m];
+		for (int i = 0; i < m; i++) {
+			arr[i] = bf.read();
+		}
+		int brr[] = new int[n];
+		for (int i = 0; i < m; i++) {
+			brr[i] = bf.read();
+		}
+		int a = m + n;
+		int mer[] = new int[a];
+		for(int i=0;i<m;i++)
+		{
+			mer[i]=arr[i];
+		}
+		for(int j=m+1,i=0;j<n;j++,i++)
+		{
+			mer[j]=brr[i];
+		}
+	}
+
+}
