@@ -51,7 +51,7 @@ public class Solution {
 		 * System.out.println(obj1.isGender());
 		 */
 		int i = 0;
-		while (i < 3) {
+		while (i <= 3) {
 			i++;
 			System.out.print("Enter Id :");
 			int id = Integer.valueOf(bf.readLine());

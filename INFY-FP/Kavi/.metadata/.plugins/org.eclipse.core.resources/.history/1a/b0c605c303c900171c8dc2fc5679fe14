@@ -2,14 +2,10 @@ package org.emp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name = "EMPLOYEE_DETAILS")
-
 public class Employee {
 
 	public Employee() {
@@ -58,14 +54,13 @@ public class Employee {
 	}
 
 	@Id
-	@GeneratedValue
 	@Column(name = "EMP_ID")
 	private int id;
-	@Column(name = "EMP_NAME", length = 150, nullable = false)
+	@Column(name="EMP_NAME",length=150,nullable=false)
 	private String name;
-	@Column(name = "EMIL_ID", length = 50, nullable = false, unique = true)
+	@Column(name = "EMIL_ID",length=50,nullable=false,unique=true)
 	private String email;
-	@Column(name = "PHN_NO", length = 10, nullable = false, unique = true)
+	@Column(name = "PHN_NO",length=10,nullable=false,unique=true)
 	private long phone;
 	@Column(name = "BS")
 	private double basicSalary;

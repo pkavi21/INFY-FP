@@ -2,14 +2,9 @@ package org.emp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
-@Table(name = "EMPLOYEE_DETAILS")
-
 public class Employee {
 
 	public Employee() {
@@ -22,7 +17,7 @@ public class Employee {
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
-
+		
 	}
 
 	public int getId() {
@@ -57,27 +52,28 @@ public class Employee {
 		this.phone = phone;
 	}
 
+	
+	
 	@Id
-	@GeneratedValue
-	@Column(name = "EMP_ID")
+	@Column(name="EMP_ID")
 	private int id;
-	@Column(name = "EMP_NAME", length = 150, nullable = false)
+	@Column(name="EMP_NAME")
 	private String name;
-	@Column(name = "EMIL_ID", length = 50, nullable = false, unique = true)
+	@Column(name="EMIL_ID")
 	private String email;
-	@Column(name = "PHN_NO", length = 10, nullable = false, unique = true)
+	@Column(name="PHN_NO")
 	private long phone;
-	@Column(name = "BS")
+	@Column(name="BS")
 	private double basicSalary;
-	@Column(name = "TA")
+	@Column(name="TA")
 	private float travelAllowance;
-	@Column(name = "HRA")
+	@Column(name="HRA")
 	private float houseRentAllowance;
-	@Column(name = "DA")
+	@Column(name="DA")
 	private float dearnessAllowance;
-	@Column(name = "PF")
+	@Column(name="PF")
 	private float providentFund;
-	@Transient
+	@Trancient
 	private float netSalary;
 
 }

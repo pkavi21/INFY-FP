@@ -23,8 +23,8 @@ public class Solution {
 
 	public static void main(String[] args) throws IOException {
 		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
-		Session session = sf.openSession();
-		session.beginTransaction();
+		Session session = sf.openSession(); 
+
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
 		/*
@@ -48,35 +48,31 @@ public class Solution {
 		 * System.out.println(obj1.getId()); System.out.println(obj1.getName());
 		 * System.out.println(obj1.getEmail());
 		 * System.out.println(obj1.getPhone());
-		 * System.out.println(obj1.isGender());
-		 */
-		int i = 0;
-		while (i < 3) {
+		 * System.out.println(obj1.isGender()); */
+		while(int i<3) { 
 			i++;
-			System.out.print("Enter Id :");
-			int id = Integer.valueOf(bf.readLine());
-			System.out.print("Enter Name :");
-			String name = bf.readLine();
-			System.out.print("Enter Email :");
-			String email = bf.readLine();
-			System.out.print("Enter Phone :");
-			long phone = Long.valueOf(bf.readLine());
-			// System.out.print("Enter Gender :");
-			// boolean gender = Boolean.valueOf(bf.readLine());
-			Employee obj = new Employee(id, name, email, phone);
-			System.out.println("Enter Id :" + obj.getId());
-			System.out.println("Enter Name :" + obj.getName());
-			System.out.println("Enter Email :" + obj.getEmail());
-			System.out.println("Enter Phone :" + obj.getPhone());
-			// System.out.println("Enter Gender :" + obj.isGender());
-
-			session.save(obj);
-		}
+		System.out.print("Enter Id :");
+		int id = Integer.valueOf(bf.readLine());
+		System.out.print("Enter Name :");
+		String name = bf.readLine();
+		System.out.print("Enter Email :");
+		String email = bf.readLine();
+		System.out.print("Enter Phone :");
+		long phone = Long.valueOf(bf.readLine());
+		//System.out.print("Enter Gender :");
+		//boolean gender = Boolean.valueOf(bf.readLine());
+		Employee obj = new Employee(id, name, email, phone);
+		System.out.println("Enter Id :" + obj.getId());
+		System.out.println("Enter Name :" + obj.getName());
+		System.out.println("Enter Email :" + obj.getEmail());
+		System.out.println("Enter Phone :" + obj.getPhone());
+		//System.out.println("Enter Gender :" + obj.isGender());
+		session.save(obj);
 		session.getTransaction().commit();
-
+		
 		sf.close();
 		session.close();
-
+		}
 	}
 
 }
