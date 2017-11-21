@@ -35,7 +35,13 @@
         <property name="hbm2ddl.auto">create</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="org.emp.Employee"/>
+        <!--  mapping resource="org/emp/employee.hbm.xml"/-->
+        <!--  mapping resource="org/isbn/bk/book.hbm.xml"/-->
+        <mapping class="org.veh.vehicle">
+        <mapping class="org.veh.twowheeler">
+        <mapping class="org.veh.fourwheeler">
+           
+       
 
     </session-factory>
 

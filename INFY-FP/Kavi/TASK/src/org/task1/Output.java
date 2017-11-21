@@ -1,7 +1,5 @@
 package org.task1;
 
-
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,11 +17,10 @@ public class Output {
 		Session session = sf.openSession();
 		session.beginTransaction();
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		
-		
+
 		int i = 0;
-		while (i < 3) {
-			i++;
+		for (i = 0; i < 2; i++) {
+
 			System.out.print("Enter Name :");
 			String name = bf.readLine();
 			System.out.print("Enter Phone :");
@@ -36,14 +33,14 @@ public class Output {
 			int departDate = Integer.valueOf(bf.readLine());
 			System.out.print("Enter Arrival Date :");
 			int arrivalDate = Integer.valueOf(bf.readLine());
-			Reservation obj = new Reservation(name,phone,fromPlace,toPlace,departDate,arrivalDate);
+			Reservation obj = new Reservation(name, phone, fromPlace, toPlace, departDate, arrivalDate);
 			System.out.println("Enter name :" + obj.getName());
 			System.out.println("Enter phone :" + obj.getPhone());
 			System.out.println("Enter fromplace :" + obj.getFromPlace());
 			System.out.println("Enter toplace :" + obj.getToPlace());
 			System.out.println("Enter departTime :" + obj.getDepartDate());
 			System.out.println("Enter arrivalTime :" + obj.getArrivalDate());
-			
+
 			session.save(obj);
 		}
 		session.getTransaction().commit();

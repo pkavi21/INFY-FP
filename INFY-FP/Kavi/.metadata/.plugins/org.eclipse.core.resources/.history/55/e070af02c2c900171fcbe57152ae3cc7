@@ -1,0 +1,14 @@
+package org.isbn.bk;
+
+import java.util.Date;
+
+public class Book {
+	private int id;
+	private String name;
+	private String publisher;
+	private String author;
+	private String isbn_no;
+	private double price;
+	private Date published_date;
+
+}

@@ -1,0 +1,12 @@
+package org.veh;
+
+public class FourWheeler extends Vehicle {
+
+	public FourWheeler() {
+		super();
+		
+	}
+	private String steeringWheel;
+	
+
+}

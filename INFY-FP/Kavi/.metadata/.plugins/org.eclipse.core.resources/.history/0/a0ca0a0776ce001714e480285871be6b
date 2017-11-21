@@ -1,0 +1,5 @@
+package org.veh;
+
+public class FourWheeler extends Vehicle {
+
+}

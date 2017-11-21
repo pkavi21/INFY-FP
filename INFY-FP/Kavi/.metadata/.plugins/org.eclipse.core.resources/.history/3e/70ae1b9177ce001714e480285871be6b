@@ -1,0 +1,21 @@
+package org.veh;
+
+public class FourWheeler extends Vehicle {
+
+	public FourWheeler() {
+		super();
+		
+	}
+	
+	public String getSteeringWheel() {
+		return steeringWheel;
+	}
+
+	public void setSteeringWheel(String steeringWheel) {
+		this.steeringWheel = steeringWheel;
+	}
+
+	private String steeringWheel;
+	
+
+}

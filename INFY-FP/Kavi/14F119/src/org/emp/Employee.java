@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-@Entity
-@Table(name = "EMPLOYEE_DETAILS")
+//@Entity
+//@Table(name = "EMPLOYEE_DETAILS")
 
 public class Employee {
 
@@ -56,28 +56,78 @@ public class Employee {
 	public void setPhone(long phone) {
 		this.phone = phone;
 	}
+	
 
-	@Id
-	@GeneratedValue
-	@Column(name = "EMP_ID")
+	public double getBasicSalary() {
+		return basicSalary;
+	}
+
+	public void setBasicSalary(double basicSalary) {
+		this.basicSalary = basicSalary;
+	}
+
+	public float getTravelAllowance() {
+		return travelAllowance;
+	}
+
+	public void setTravelAllowance(float travelAllowance) {
+		this.travelAllowance = travelAllowance;
+	}
+
+	public float getHouseRentAllowance() {
+		return houseRentAllowance;
+	}
+
+	public void setHouseRentAllowance(float houseRentAllowance) {
+		this.houseRentAllowance = houseRentAllowance;
+	}
+
+	public float getDearnessAllowance() {
+		return dearnessAllowance;
+	}
+
+	public void setDearnessAllowance(float dearnessAllowance) {
+		this.dearnessAllowance = dearnessAllowance;
+	}
+
+	public float getProvidentFund() {
+		return providentFund;
+	}
+
+	public void setProvidentFund(float providentFund) {
+		this.providentFund = providentFund;
+	}
+
+	public float getNetSalary() {
+		return netSalary;
+	}
+
+	public void setNetSalary(float netSalary) {
+		this.netSalary = netSalary;
+	}
+
+
+	//@Id
+	//@GeneratedValue
+	//@Column(name = "EMP_ID")
 	private int id;
-	@Column(name = "EMP_NAME", length = 150, nullable = false)
+	//@Column(name = "EMP_NAME", length = 150, nullable = false)
 	private String name;
-	@Column(name = "EMIL_ID", length = 50, nullable = false, unique = true)
+	//@Column(name = "EMIL_ID", length = 50, nullable = false, unique = true)
 	private String email;
-	@Column(name = "PHN_NO", length = 10, nullable = false, unique = true)
+	//@Column(name = "PHN_NO", length = 10, nullable = false, unique = true)
 	private long phone;
-	@Column(name = "BS")
+	//@Column(name = "BS")
 	private double basicSalary;
-	@Column(name = "TA")
+	//@Column(name = "TA")
 	private float travelAllowance;
-	@Column(name = "HRA")
+	//@Column(name = "HRA")
 	private float houseRentAllowance;
-	@Column(name = "DA")
+	//@Column(name = "DA")
 	private float dearnessAllowance;
-	@Column(name = "PF")
+	//@Column(name = "PF")
 	private float providentFund;
-	@Transient
+	//@Transient
 	private float netSalary;
 
 }

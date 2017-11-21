@@ -1,0 +1,61 @@
+package org.isbn.bk;
+
+import java.util.Date;
+
+public class Book {
+	
+	public int getId() {
+		return bid;
+	}
+	public void setId(int id) {
+		this.bid = id;
+	}
+	public String getName() {
+		return bname;
+	}
+	public void setName(String name) {
+		this.bname = name;
+	}
+	public String getPublisher() {
+		return publisher;
+	}
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getIsbn_no() {
+		return isbn_no;
+	}
+	public void setIsbn_no(String isbn_no) {
+		this.isbn_no = isbn_no;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+
+	private int bid;
+	private String bname;
+	private String publisher;
+	private String author;
+	private String isbn_no;
+	private double price;
+	private String date;
+
+}
