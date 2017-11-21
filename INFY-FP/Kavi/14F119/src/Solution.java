@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import org.emp.Employee;
-import org.grosary.Item;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -19,6 +19,7 @@ public class Solution {
 		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 		Session session = sf.openSession();
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		session.beginTransaction();
 
 		Vehicle vehicle=new Vehicle();
 		vehicle.setName("car");
@@ -31,7 +32,12 @@ public class Solution {
 		four.setName("Porsche");
 		four.setSteeringWheel("Porsche Steering Wheel");
 		
-				
+		
+		session.save(vehicle);
+		session.save(two);
+		session.save(four);
+		
+		session.getTransaction().commit();
 		session.close();
 		sf.close();
 

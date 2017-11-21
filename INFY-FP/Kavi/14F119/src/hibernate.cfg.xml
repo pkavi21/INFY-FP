@@ -37,9 +37,9 @@
         <!-- Names the annotated entity class -->
         <!--  mapping resource="org/emp/employee.hbm.xml"/-->
         <!--  mapping resource="org/isbn/bk/book.hbm.xml"/-->
-        <mapping class="org.veh.vehicle">
-        <mapping class="org.veh.twowheeler">
-        <mapping class="org.veh.fourwheeler">
+        <mapping class="org.veh.Vehicle"/>
+        <mapping class="org.veh.TwoWheeler"/>
+        <mapping class="org.veh.FourWheeler"/>
            
        
 
