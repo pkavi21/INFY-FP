@@ -13,7 +13,6 @@ import org.veh.TwoWheeler;
 import org.veh.Vehicle;
 
 public class Solution {
-	
 
 	public static void main(String[] args) throws IOException {
 		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
@@ -21,22 +20,21 @@ public class Solution {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		session.beginTransaction();
 
-		Vehicle vehicle=new Vehicle();
+		Vehicle vehicle = new Vehicle();
 		vehicle.setName("car");
-		
+
 		TwoWheeler two = new TwoWheeler();
 		two.setName("Bike");
 		two.setSteeringHandle("Bike Steering Handle");
-		
+
 		FourWheeler four = new FourWheeler();
 		four.setName("Porsche");
 		four.setSteeringWheel("Porsche Steering Wheel");
-		
-		
+
 		session.save(vehicle);
 		session.save(two);
 		session.save(four);
-		
+
 		session.getTransaction().commit();
 		session.close();
 		sf.close();
